@@ -1,0 +1,1 @@
+{!! $dataChart->render() !!}

@@ -1,0 +1,9 @@
+<!-- $FIELD_NAME_TITLE$ Field -->
+<div class="col-md-6">
+    <b>$FIELD_NAME_TITLE$: </b>
+    <div class="input-group ">
+        <div class="form-line">
+            {!! Form::number('$FIELD_NAME$', null, ['class' => 'form-control'$SIZE$]) !!}
+        </div>
+    </div>
+</div>
