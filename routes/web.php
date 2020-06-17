@@ -47,7 +47,7 @@ Route::group(['prefix' => 'admin','middleware'=>'auth'], function () {
     Route::resource('thuePhongs', 'Manage\ThuePhongController', ["as" => 'admin']);
     Route::get('sinhViens/import/importExcel','Manage\SinhVienController@getImport')->name('sinhvien.importGet');
     Route::post('sinhViens/import/importExcel','Manage\SinhVienController@postImport')->name('sinhvien.importPost');
+    Route::resource('hoaDons', 'Manage\HoaDonController', ["as" => 'admin']);
+    Route::get('hoaDons/thutien/{id}','Manage\HoaDonController@thutien')->name('admin.hoadon.thutien');
 });
-
-
 

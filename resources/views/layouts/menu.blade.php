@@ -1,3 +1,4 @@
+<!---
 <li class="header">Quản lý phân quyền tài khoản</li>
 <li>
     <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
@@ -24,7 +25,7 @@
         </li>
     </ul>
 </li>
-
+-->
 <li class="header">Danh mục quản lý</li>
 <li class="{{ Request::is('admin')||Request::is('admin/thuephong/*') ? 'active' : '' }}">
         <a href="{{route('admin.dashboard.index')}}">
@@ -46,18 +47,17 @@
         <span>Quản lý Phòng</span>
     </a>
 </li>
+<li class="{{ Request::is('admin/hoaDons*') ? 'active' : '' }}">
+    <a href="{{ route('admin.hoaDons.index') }}" class=" waves-effect waves-block">
+    <i class="material-icons">receipt</i>
+        <span>Quản lý Hóa Đơn</span>
+    </a>
+</li>
 
 <li class="{{ Request::is('admin/khoas*') ? 'active' : '' }}">
     <a href="{{ route('admin.khoas.index') }}" class=" waves-effect waves-block">
         <i class="material-icons">account_balance</i>
         <span>Quản lý Khoa</span>
-    </a>
-</li>
-
-<li class="{{ Request::is('admin/nguoiQuanLies*') ? 'active' : '' }}">
-    <a href="{{ route('admin.nguoiQuanLies.index') }}" class=" waves-effect waves-block">
-    <i class="material-icons">account_circle</i>
-        <span>Nguoi Quản Lý</span>
     </a>
 </li>
 
@@ -67,6 +67,13 @@
         <span>Khu</span>
     </a>
 </li>
+<li class="{{ Request::is('admin/nguoiQuanLies*') ? 'active' : '' }}">
+    <a href="{{ route('admin.nguoiQuanLies.index') }}" class=" waves-effect waves-block">
+    <i class="material-icons">account_circle</i>
+        <span>Nguoi Quản Lý</span>
+    </a>
+</li>
+
 
 <li class="{{ Request::is('admin/tangs*') ? 'active' : '' }}">
     <a href="{{ route('admin.tangs.index') }}" class=" waves-effect waves-block">
@@ -81,3 +88,4 @@
         <span>Loại Phòng</span>
     </a>
 </li>
+
